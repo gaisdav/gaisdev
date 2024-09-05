@@ -1,7 +1,7 @@
 <script>
 	import CV from '$lib/pdfs/Gaisar Davletkildin (CV Frontend).pdf';
 
-	const title = 'My CV!';
+	const title = 'My CV!!!';
 </script>
 
 <svelte:head>
