@@ -2,7 +2,7 @@
 	import Sidebar from '$components/Sidebar.svelte';
 	import Section from '$components/Section.svelte';
 
-	const title = 'My CV!!!';
+	const title = 'Gaisar Davletkildin. CV.';
 </script>
 
 <svelte:head>

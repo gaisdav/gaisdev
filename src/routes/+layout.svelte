@@ -16,5 +16,9 @@
 		margin: 0 auto;
 		box-sizing: border-box;
 		gap: 16px;
+
+		@media (max-width: 1024px) {
+			flex-direction: column;
+		}
 	}
 </style>

@@ -5,6 +5,15 @@
 <main class="main">
 	<Card class="sidebar">
 		<h2 class="about-title">About me</h2>
+		<nav class="nav">
+			<Card>
+				<ul>
+					<li>
+						<button>O</button>
+					</li>
+				</ul>
+			</Card>
+		</nav>
 
 		<div class="divider"></div>
 
@@ -41,6 +50,7 @@
 	}
 
 	.main {
+		position: relative;
 		flex: 1;
 	}
 
@@ -55,6 +65,24 @@
 
 		&:last-child {
 			margin-bottom: 0;
+		}
+	}
+
+	.nav {
+		position: absolute;
+		right: 0;
+		top: 0;
+
+		:global(.card) {
+			padding: 14px;
+			border-top-left-radius: 0;
+			border-bottom-right-radius: 0;
+		}
+	}
+
+	@media print {
+		.nav {
+			display: none;
 		}
 	}
 </style>
