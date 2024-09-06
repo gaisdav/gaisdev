@@ -1,5 +1,4 @@
 <script>
-	import CV from '$lib/pdfs/Gaisar Davletkildin (CV Frontend).pdf';
 	import Card from '$components/Card.svelte';
 </script>
 
