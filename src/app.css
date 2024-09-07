@@ -18,7 +18,7 @@
 	color: var(--color-text);
 }
 
-[data-theme='dark']:root {
+[data-theme='light']:root {
 	--bg-main: #efefef;
 	--bg-content: #ffffff;
 

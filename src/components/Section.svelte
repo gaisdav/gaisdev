@@ -1,5 +1,11 @@
 <script>
 	import Card from '$components/Card.svelte';
+
+	function changeTheme() {
+		const html = document.getElementsByTagName('html')[0];
+		const isDark = html.getAttribute('data-theme') === 'dark';
+		html.setAttribute('data-theme', isDark ? 'light' : 'dark');
+	}
 </script>
 
 <main class="main">
@@ -7,11 +13,7 @@
 		<h2 class="about-title">About me</h2>
 		<nav class="nav">
 			<Card>
-				<ul>
-					<li>
-						<button>O</button>
-					</li>
-				</ul>
+				<button on:click={changeTheme}>O</button>
 			</Card>
 		</nav>
 
