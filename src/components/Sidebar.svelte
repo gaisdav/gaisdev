@@ -1,56 +1,34 @@
 <script>
 	import Card from '$components/Card.svelte';
+	import Contacts from '$components/Contacts.svelte';
+	import avatar from '$lib/images/avatar.png';
 </script>
 
 <aside class="aside">
 	<Card class="sidebar">
+		<img class="avatar" src={avatar} alt="Gaisar Davletkildin. Avatar. CV. Resume." />
 		<h1 class="name">Gaisar Davletkildin</h1>
 		<h3 class="position">Senior Frontend Developer</h3>
 		<div class="divider"></div>
-		<div class="contacts">
-			<div class="contact">
-				<div>PHONE</div>
-				<a class="contact-value" href="tel:+381621147535">+381621147535</a>
-				<a class="contact-value" href="tel:+79773495113">+79773495113</a>
-			</div>
-			<div class="contact">
-				<div>EMAIL</div>
-				<a class="contact-value" href="mailto:gais.davletkildin@gmail.com"
-					>gais.davletkildin@gmail.com</a
-				>
-			</div>
-			<div class="contact">
-				<div>GITHUB</div>
-				<a class="contact-value" target="_blank" href="https://github.com/gaisdav"
-					>https://github.com/gaisdav</a
-				>
-			</div>
-			<div class="contact">
-				<div>TELEGRAM</div>
-				<a class="contact-value" target="_blank" href="https://t.me/gaisdav">https://t.me/gaisdav</a
-				>
-			</div>
-			<div class="contact">
-				<div>LINKEDIN</div>
-				<a
-					class="contact-value"
-					target="_blank"
-					href="https://www.linkedin.com/in/gaisdav/?locale=en_US"
-					>https://www.linkedin.com/in/gaisdav</a
-				>
-			</div>
-		</div>
+		<Contacts />
 	</Card>
 </aside>
 
 <style>
 	.aside {
-		position: sticky;
-		top: 0;
-		max-width: 300px;
+		.avatar {
+			width: 60%;
+			border-radius: 25%;
+			margin: 0 auto;
+		}
 
 		.name {
+			text-align: center;
 			font-size: 24px;
+		}
+
+		.position {
+			text-align: center;
 		}
 
 		.divider {
@@ -66,14 +44,10 @@
 			gap: 16px;
 		}
 
-		.contacts {
-			display: flex;
-			flex-direction: column;
-			gap: 8px;
-		}
-
-		.contact-value {
-			word-break: break-word;
+		@media (max-width: 1024px) {
+			.divider {
+				width: 100%;
+			}
 		}
 	}
 </style>
