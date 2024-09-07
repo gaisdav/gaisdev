@@ -2,9 +2,9 @@
 	import Card from '$components/Card.svelte';
 
 	function changeTheme() {
-		const html = document.getElementsByTagName('html')[0];
-		const isDark = html.getAttribute('data-theme') === 'dark';
-		html.setAttribute('data-theme', isDark ? 'light' : 'dark');
+		const value = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+		document.documentElement.setAttribute('data-theme', value);
+		localStorage.setItem('theme', value);
 	}
 </script>
 
