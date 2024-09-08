@@ -1,21 +1,45 @@
-<script>
+<script lang="ts">
 	import Card from '$components/Card.svelte';
+	import LightModeIcon from '$components/LightModeIcon.svelte';
+	import DarkModeIcon from '$components/DarkModeIcon.svelte';
+	import { onMount } from 'svelte';
+
+	let mode: string | null = null;
+
+	onMount(() => {
+		const savedTheme = localStorage.getItem('theme');
+		mode = savedTheme || 'dark';
+
+		applyTheme(mode);
+	});
+
+	function applyTheme(mode: string) {
+		document.documentElement.setAttribute('data-theme', mode);
+		localStorage.setItem('theme', mode);
+	}
 
 	function changeTheme() {
-		const value = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-		document.documentElement.setAttribute('data-theme', value);
-		localStorage.setItem('theme', value);
+		mode = mode === 'dark' ? 'light' : 'dark';
+		applyTheme(mode);
 	}
 </script>
 
 <main class="main">
 	<Card class="sidebar">
 		<h2 class="about-title">About me</h2>
-		<nav class="nav">
-			<Card>
-				<button on:click={changeTheme}>O</button>
-			</Card>
-		</nav>
+		{#if mode}
+			<nav class="nav">
+				<Card>
+					<button class="theme-switcher" onclick={changeTheme} aria-label="theme-switcher">
+						{#if mode === 'dark'}
+							<LightModeIcon class="icon" />
+						{:else}
+							<DarkModeIcon class="icon" />
+						{/if}
+					</button>
+				</Card>
+			</nav>
+		{/if}
 
 		<div class="divider"></div>
 
@@ -80,11 +104,43 @@
 			border-top-left-radius: 0;
 			border-bottom-right-radius: 0;
 		}
+
+		.theme-switcher {
+			background: none;
+			border: none;
+			cursor: pointer;
+			padding: 0;
+			margin: 0;
+			height: 24px;
+
+			:global(.icon) {
+				animation: scale-in 0.3s ease;
+			}
+		}
 	}
 
 	@media print {
 		.nav {
 			display: none;
+		}
+	}
+
+	[data-theme='light']:root {
+		.theme-switcher {
+			:global(.icon) {
+				fill: var(--color-text);
+			}
+		}
+	}
+
+	@keyframes scale-in {
+		from {
+			opacity: 0;
+			transform: scale(0.5);
+		}
+		to {
+			opacity: 1;
+			transform: scale(1);
 		}
 	}
 </style>
