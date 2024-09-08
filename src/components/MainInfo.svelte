@@ -4,8 +4,8 @@
 	import avatar from '$lib/images/avatar.png';
 </script>
 
-<aside class="aside">
-	<Card class="sidebar">
+<section {...$$restProps} class={`main-info-section ${$$restProps.class || ''}`}>
+	<Card>
 		<div class="main-info">
 			<img class="avatar" src={avatar} alt="Gaisar Davletkildin. Avatar. CV. Resume." />
 			<div class="name-wrapper">
@@ -16,10 +16,10 @@
 		<div class="divider"></div>
 		<Contacts />
 	</Card>
-</aside>
+</section>
 
 <style>
-	.aside {
+	.main-info-section {
 		.avatar {
 			width: 60%;
 			border-radius: 25%;
@@ -54,7 +54,7 @@
 			gap: 8px;
 		}
 
-		:global(.sidebar) {
+		:global(.card) {
 			display: flex;
 			flex-direction: column;
 			gap: 16px;

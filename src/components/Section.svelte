@@ -24,7 +24,8 @@
 	}
 </script>
 
-<main class="main">
+<!--// TODO вынести в отдельный компонент как шаблон-->
+<main class="about">
 	<Card class="sidebar">
 		<h2 class="about-title">About me</h2>
 		{#if mode}
@@ -75,7 +76,7 @@
 		margin: 10px 0;
 	}
 
-	.main {
+	.about {
 		position: relative;
 		flex: 1;
 	}

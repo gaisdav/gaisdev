@@ -1,4 +1,4 @@
-<div {...$$restProps} class={`card ${$$restProps.class}`}>
+<div {...$$restProps} class={`card ${$$restProps.class || ''}`}>
 	<slot />
 </div>
 
