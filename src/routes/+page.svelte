@@ -2,6 +2,7 @@
 	import MainInfo from '$components/MainInfo.svelte';
 	import Section from '$components/Section.svelte';
 	import HardSkills from '$components/HardSkills.svelte';
+	import Experience from '$components/Experience.svelte';
 
 	const title = 'Gaisar Davletkildin. CV.';
 </script>
@@ -15,6 +16,7 @@
 	<MainInfo />
 	<HardSkills />
 	<Section />
+	<Experience />
 </main>
 
 <style>
@@ -26,6 +28,9 @@
 	}
 	:global(.about) {
 		grid-area: about;
+	}
+	:global(.experience-section) {
+		grid-area: experience;
 	}
 
 	.main {
@@ -40,14 +45,16 @@
 		gap: 16px;
 		grid-template-areas:
 			'main-info   about'
-			'hard-skills about';
+			'hard-skills about'
+			'experience  experience';
 
 		@media (max-width: 1024px) {
 			grid-template-columns: 1fr;
 			grid-template-areas:
 				'main-info'
 				'about'
-				'hard-skills';
+				'hard-skills'
+				'experience';
 		}
 	}
 </style>

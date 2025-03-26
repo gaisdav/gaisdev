@@ -2,6 +2,7 @@
 	<div class="contact">
 		<div>PHONE</div>
 		<a class="contact-value" href="tel:+381621147535">+381621147535</a>
+		<br />
 		<a class="contact-value" href="tel:+79773495113">+79773495113</a>
 	</div>
 	<div class="contact">

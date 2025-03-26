@@ -45,20 +45,15 @@
 		<div class="divider"></div>
 
 		<p class="text">
-			I'm Gaisar, a front-end software engineer with 6 years of experience. My expertise includes
-			React, TypeScript, MobX, and NodeJS. Additionally, I have a good knowledge of Vue, React
-			Native and Redux.
+			I'm Gaisar, a frontend developer with 7 years of experience specializing in React, TypeScript
+			and ReactNative. I have deep knowledge in designing and developing web application
+			architecture, creating and optimising component libraries. My experience also includes working
+			with testing tools (Jest, Storybook) and supporting high-performance applications.
 		</p>
 		<p class="text">
-			In my testing practices, I rely on industry-standard tools like Jest and Storybook to ensure
-			the reliability and quality of my codebase. Throughout my career, I've successfully launched
-			numerous projects spanning various technologies, demonstrating my adaptability and versatility
-			in delivering high-quality solutions.
-		</p>
-		<p class="text">
-			Currently, I'm immersed in the development of a CRM system tailored specifically for company
-			managers. This responsibility has honed my ability to understand complex business needs and
-			translate them into robust technical solutions.
+			I've successfully launched numerous projects spanning various technologies, demonstrating my
+			adaptability and versatility in delivering high-quality solutions. I am currently leading the
+			development of four projects.
 		</p>
 		<p class="text">
 			As an individual, I pride myself on being responsible, open-minded, and honest. I would be
