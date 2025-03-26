@@ -70,6 +70,15 @@
 
 	.included {
 		margin-left: 24px;
+		margin-top: 4px;
 		list-style: disc;
+	}
+
+	@media (max-width: 1024px) {
+		.skills-list {
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-around;
+		}
 	}
 </style>

@@ -45,8 +45,9 @@
 		gap: 16px;
 		grid-template-areas:
 			'main-info   about'
-			'hard-skills about'
-			'experience  experience';
+			'main-info   experience'
+			'hard-skills experience'
+			'hard-skills  experience';
 
 		@media (max-width: 1024px) {
 			grid-template-columns: 1fr;
